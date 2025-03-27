@@ -1,67 +1,80 @@
-# Sistema de Gerenciamento de Contatos e Agendas
+# 📱 Sistema de Gerenciamento de Contatos e Agendas
 
-Um sistema simples para gerenciar contatos e agendas usando Python e MongoDB.
+Um sistema de gerenciamento de contatos e agendas desenvolvido em Python, utilizando MongoDB como banco de dados através do MongoEngine.
 
-## Requisitos
+## 🚀 Funcionalidades
+
+### 👥 Gestão de Contatos
+- Adicionar novos contatos
+- Listar todos os contatos
+- Atualizar informações de contatos existentes
+- Excluir contatos
+
+### 📚 Gestão de Agendas
+- Criar novas agendas
+- Listar todas as agendas
+- Atualizar informações de agendas
+- Excluir agendas
+
+### 🔄 Operações com Agenda
+- Adicionar contatos a agendas específicas
+
+## 📋 Pré-requisitos
 
 - Python 3.x
-- MongoDB instalado e rodando
-- Pacote mongoengine
+- MongoDB instalado e em execução
+- Pacotes Python necessários:
+  - mongoengine
 
-## Instalação
+## 🛠️ Instalação
 
-1. Clone este repositório
+1. Clone o repositório:
+```bash
+git clone https://github.com/Pxxx010/Sistema-de-Gerenciamento-de-Contatos-e-Agendas.git
+cd ATV-CRUD-MONGO
+```
+
 2. Instale as dependências:
 ```bash
 pip install mongoengine
 ```
 
-## Como Usar
+3. Certifique-se de que o MongoDB está em execução em sua máquina.
 
-1. Certifique-se de que o MongoDB está rodando
-2. Execute o programa:
+## 💻 Como Usar
+
+1. Execute o programa:
 ```bash
 python main.py
 ```
 
-## Funcionalidades
+2. Use o menu interativo para:
+   - Gerenciar contatos (adicionar, listar, atualizar, excluir)
+   - Gerenciar agendas (criar, listar, atualizar, excluir)
+   - Adicionar contatos a agendas
 
-### 1. Adicionar Contato
-- Adicione um novo contato com nome e telefone
-- Opção para adicionar o contato diretamente a uma agenda
+## 🗄️ Estrutura do Banco de Dados
 
-### 2. Listar Contatos
-- Visualize todos os contatos cadastrados no sistema
+### Coleção: Contact
+- name (String, obrigatório)
+- phone (String, obrigatório)
 
-### 3. Criar Agenda
-- Crie uma nova agenda para organizar seus contatos
+### Coleção: Agenda
+- name (String, obrigatório)
+- contacts (Lista de referências para Contact)
 
-### 4. Listar Agendas
-- Visualize todas as agendas e seus contatos
+## 🤝 Contribuindo
 
-### 5. Adicionar Contato à Agenda
-- Adicione um contato existente a uma agenda específica
+Contribuições são sempre bem-vindas! Sinta-se à vontade para:
+1. Fazer um fork do projeto
+2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abrir um Pull Request
 
-### 6. Sair
-- Encerra o programa
+## 📝 Licença
 
-## Estrutura do Projeto
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-- `main.py`: Arquivo principal com toda a lógica do sistema
-- `contact_db`: Banco de dados MongoDB criado automaticamente
-
-## Modelos de Dados
-
-### Contact
-- name: Nome do contato
-- phone: Número de telefone
-
-### Agenda
-- name: Nome da agenda
-- contacts: Lista de contatos
-
-## Observações
-
-- O sistema usa MongoDB como banco de dados
-- Os dados são persistidos automaticamente
-- Interface em linha de comando com formatação amigável 
+---
+⭐️ Desenvolvido com ❤️ 
